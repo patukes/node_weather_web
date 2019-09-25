@@ -17,14 +17,14 @@ fetch('http://localhost:2000/weather?address='+location).then((response)=>{
         
         if(data.error){
             msg1.textContent=data.error
-            console.log(data.error)
+
             
         
         }  
         else{
            msg1.textContent=data.location
             msg2.textContent=data.forecast
-            console.log('hello')
+            
             
         }
 
