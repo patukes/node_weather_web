@@ -11,7 +11,7 @@ const location=search.value
 msg1.textContent= 'loading location'
 msg2.textContent = ''
 
-fetch('http://localhost:2000/weather?address='+location).then((response)=>{
+fetch('/weather?address='+location).then((response)=>{
     
     response.json().then((data)=>{
         
