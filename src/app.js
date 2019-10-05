@@ -8,7 +8,7 @@ const publicDirectory=path.join(__dirname,'../public')
 const partialPath=path.join(__dirname,'../templates/partial')
 hbs.registerPartials(partialPath)
 const app=express()
-const port=process.env.PORT || 3000
+const port=process.env.PORT || 4000
 app.set('view engine','hbs')
 app.set('views',viewsPath)
 app.engine('hbs', require('hbs').__express);
@@ -75,7 +75,7 @@ app.get('/weather',(req,res)=>{
                 
             }
            else {
-            forecast(latitude,longtitude,(error2,{forecast}={})=>{
+            forecast(longtitude,latitude,(error2,{forecast}={})=>{
                     if(error){
                         return res.send({ error2:
                             error})
